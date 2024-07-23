@@ -33,21 +33,25 @@ public class MainActivity extends AppCompatActivity {
         super.onDestroy();
         showToast(LifeCycle.ON_DESTROY.getMessage());
     }
+
     @Override
     protected void onStop(){
         super.onStop();
         showToast(LifeCycle.ON_STOP.getMessage());
     }
+
     @Override
     protected void onStart(){
         super.onStart();
         showToast(LifeCycle.ON_START.getMessage());
     }
+
     @Override
     protected void onPause(){
         super.onPause();
         showToast(LifeCycle.ON_PAUSE.getMessage());
     }
+
     @Override
     protected void onResume(){
         super.onResume();
