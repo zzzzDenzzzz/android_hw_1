@@ -10,22 +10,20 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView textView;
-    private EditText editText;
-    private Button button;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView textView = findViewById(R.id.textView);
+        EditText editText = findViewById(R.id.editText);
+        Button button = findViewById(R.id.button);
+
         showToast(LifeCycle.ON_CREATE.getMessage());
 
-        textView = findViewById(R.id.textView);
-        editText = findViewById(R.id.editText);
-        button = findViewById(R.id.button);
-
-        button.setOnClickListener(view -> textView.setText(String.valueOf(editText.getText()).toUpperCase()));
+        button.setOnClickListener(view ->
+                textView.setText( String.valueOf(editText.getText()).toUpperCase())
+        );
     }
 
     @Override

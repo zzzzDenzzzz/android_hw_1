@@ -13,7 +13,7 @@ public enum LifeCycle {
         return message;
     }
 
-    private String message;
+    private final String message;
 
     LifeCycle(String message) {
         this.message = message;
